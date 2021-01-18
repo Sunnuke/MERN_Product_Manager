@@ -6,7 +6,7 @@ export default () => {
 
     useEffect(() => {
         axios.get("http://localhost:8000/api")
-            .then(res => setMessage(res))
+            .then(res => setMessage(res.data.message))
     }, []);
 
     return(
