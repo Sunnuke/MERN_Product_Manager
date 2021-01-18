@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 
 export default () => {
-    const [message, setMessage] = useState("Please Wait!...");
+    const [message, setMessage] = useState("Connecting...");
 
     useEffect(() => {
         axios.get("http://localhost:8000/api")
@@ -10,6 +10,6 @@ export default () => {
     }, []);
 
     return(
-        <h1>Success Message: {message}</h1>
+        <h1>Connection status: {message}</h1>
     )
 }
