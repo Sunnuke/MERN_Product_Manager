@@ -1,0 +1,26 @@
+{
+  "name": "MERN_Product_Manager",
+  "version": "1.0.0",
+  "description": "For this project I will be practicing the creation of a full-stack MERN app. The concept will be a basic product manager that a user can use to add a list of products, the may also view the list of all the items they have added, also the user can view a selected item where the items attributes would be displayed, and delete items as well.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sunnuke/MERN_Product_Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sunnuke/MERN_Product_Manager/issues"
+  },
+  "homepage": "https://github.com/Sunnuke/MERN_Product_Manager#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12"
+  }
+}
