@@ -6,13 +6,13 @@ module.exports.index = (request, response) => {
     });
 }
 
-module.exports.ProductNew = (request, response) => {
+module.exports.createProduct = (request, response) => {
     const { title, price, description } = request.body;
     Product.create({
         title,
         price,
         description
     })
-        .then(response => response.json(person))
+        .then(product => response.json(product))
         .catch(err => response.json(err));
 }
