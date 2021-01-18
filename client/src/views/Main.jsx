@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import ProductForm from "../components/ProductForm";
 
 export default () => {
     const [message, setMessage] = useState("Connecting...");
@@ -10,6 +11,9 @@ export default () => {
     }, []);
 
     return(
-        <h1>Connection status: {message}</h1>
+        <>
+            <h1>Connection status: {message}</h1>
+            <ProductForm />
+        </>
     )
 }
