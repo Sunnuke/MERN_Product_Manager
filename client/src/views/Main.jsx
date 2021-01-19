@@ -23,7 +23,7 @@ export default () => {
         <>
             <h1>Connection status: {message}</h1>
             <ProductForm />
-            <br/>
+            <hr/>
             {loaded && <ProductList products={products}/>}
         </>
     )

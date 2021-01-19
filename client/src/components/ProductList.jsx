@@ -5,9 +5,11 @@ export default (props) => {
         <div>
             {
                 props.products.map((product, i) => {
-                    let temp = "http://localhost:8000/api/products/" + product.id;
+                    let temp = "http://localhost:3000/products/" + product._id;
                     return(
-                        <a href={temp}>{product.title}</a>
+                        <>
+                            <a href={temp}>{product.title}</a><br/>
+                        </>
                     )
                 })
             }
