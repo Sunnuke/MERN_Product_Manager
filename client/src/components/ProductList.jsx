@@ -7,7 +7,7 @@ export default (props) => {
                 props.products.map((product, i) => {
                     let temp = "http://localhost:8000/api/products/" + product.id;
                     return(
-                        <a href={temp}>{product}</a>
+                        <a href={temp}>{product.title}</a>
                     )
                 })
             }
