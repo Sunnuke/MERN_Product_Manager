@@ -19,12 +19,16 @@ export default () => {
             .then(res => setMessage(res.data.message))
     }, []);
 
+    const removingDOM = (productId) => {
+        setProducts(products.filter(product => product._id != productId));
+    }
+
     return(
         <>
             <h1>Connection status: {message}</h1>
             <ProductForm />
             <hr/>
-            {loaded && <ProductList products={products}/>}
+            {loaded && <ProductList products={products} deletingDOM={removingDOM}/>}
         </>
     )
 }
