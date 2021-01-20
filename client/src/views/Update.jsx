@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default (props) => {
-    const {id} = props;
+    const { id } = props;
     const [ title, setTitle ] = useState("");
     const [ price, setPrice ] = useState("");
     const [ description, setDescription ] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:8000/product/" + id)
+        axios.get("http://localhost:8000/api/products/" + id)
             .then(res => {
                 setTitle(res.data.title);
                 setPrice(res.data.price);
@@ -19,7 +19,7 @@ export default (props) => {
 
     const updating = (e) => {
         e.preventDefault();
-        axios.put("/api/products/" + id, {
+        axios.put("http://localhost:8000/api/products/" + id, {
             title,
             price,
             description
@@ -41,7 +41,7 @@ export default (props) => {
 
                 <p>
                     <label>Price</label><br/>
-                    <input type="text"
+                    <input type="number"
                     name="price"
                     value={price}
                     onChange={ e => { setPrice(e.target.value) } }/>

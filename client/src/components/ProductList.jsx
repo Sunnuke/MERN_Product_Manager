@@ -15,7 +15,7 @@ export default (props) => {
             {
                 props.products.map((product, i) => {
                     return(
-                        <>
+                        <div key={i}>
                             <p>
                                 <Link to={"/products/" + product._id}>
                                     {product.title}
@@ -25,7 +25,7 @@ export default (props) => {
                                     Delete
                                 </button>
                             </p>
-                        </>
+                        </div>
                     )
                 })
             }

@@ -28,7 +28,7 @@ export default () => {
             <h1>Connection status: {message}</h1>
             <ProductForm />
             <hr/>
-            {loaded && <ProductList products={products} deletingDOM={removingDOM}/>}
+            {loaded && <ProductList products={products} removingDOM={removingDOM}/>}
         </>
     )
 }

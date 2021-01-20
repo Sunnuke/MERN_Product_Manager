@@ -13,7 +13,7 @@ export default (props) => {
             <p>Title: {product.title}</p>
             <p>Price: {product.price}</p>
             <p>Description: {product.description}</p>
-            <Link to={"/product/" + props.id + "/edit"}>
+            <Link to={"/products/" + props.id + "/edit"}>
                 Edit
             </Link>
         </div>
