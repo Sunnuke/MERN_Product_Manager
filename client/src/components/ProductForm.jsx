@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { navigate } from "@reach/router";
 
 export default () => {
     const [ title, setTitle ] = useState("");
@@ -13,7 +14,10 @@ export default () => {
             price,
             description
         })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res);
+                navigate("/products");
+            })
             .catch(err => console.log(err))
     }
 
