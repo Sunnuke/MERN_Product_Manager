@@ -1,15 +1,9 @@
 import { Link } from "@reach/router";
-import axios from "axios";
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 export default (props) => {
     const { removingDOM } = props;
-    const deleting = (id) => {
-        axios.delete("http://localhost:8000/api/products/" + id)
-            .then(res => {
-                removingDOM(id);
-            })
-    }
     return(
         <div>
             {
@@ -20,10 +14,8 @@ export default (props) => {
                                 <Link to={"/products/" + product._id}>
                                     {product.title}
                                 </Link>
-                                 | 
-                                <button onClick={ e => {deleting(product._id)} }>
-                                    Delete
-                                </button>
+                                | 
+                                <DeleteButton productId={product._id} removingDOM={() => removingDOM(product._id)} />
                             </p>
                         </div>
                     )

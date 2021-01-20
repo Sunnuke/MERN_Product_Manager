@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Router } from "@reach/router";
 import './App.css';
 import Main from "./views/Main";
