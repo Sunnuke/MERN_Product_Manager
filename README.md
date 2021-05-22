@@ -16,4 +16,4 @@ SELECTING AN ITEM
 
 EDITING AN ITEM
 <img src="/img/edit.JPG">
-<img src="/img/editing.JPG">
+<img src="/img/edited.JPG">
